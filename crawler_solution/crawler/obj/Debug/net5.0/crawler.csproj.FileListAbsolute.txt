@@ -1,0 +1,16 @@
+C:\Users\77076\Desktop\APBD\tutorial 1\tutorial-1-syio27-1\crawler_solution\crawler\bin\Debug\net5.0\crawler.exe
+C:\Users\77076\Desktop\APBD\tutorial 1\tutorial-1-syio27-1\crawler_solution\crawler\bin\Debug\net5.0\crawler.deps.json
+C:\Users\77076\Desktop\APBD\tutorial 1\tutorial-1-syio27-1\crawler_solution\crawler\bin\Debug\net5.0\crawler.runtimeconfig.json
+C:\Users\77076\Desktop\APBD\tutorial 1\tutorial-1-syio27-1\crawler_solution\crawler\bin\Debug\net5.0\crawler.runtimeconfig.dev.json
+C:\Users\77076\Desktop\APBD\tutorial 1\tutorial-1-syio27-1\crawler_solution\crawler\bin\Debug\net5.0\crawler.dll
+C:\Users\77076\Desktop\APBD\tutorial 1\tutorial-1-syio27-1\crawler_solution\crawler\bin\Debug\net5.0\ref\crawler.dll
+C:\Users\77076\Desktop\APBD\tutorial 1\tutorial-1-syio27-1\crawler_solution\crawler\bin\Debug\net5.0\crawler.pdb
+C:\Users\77076\Desktop\APBD\tutorial 1\tutorial-1-syio27-1\crawler_solution\crawler\obj\Debug\net5.0\crawler.csprojAssemblyReference.cache
+C:\Users\77076\Desktop\APBD\tutorial 1\tutorial-1-syio27-1\crawler_solution\crawler\obj\Debug\net5.0\crawler.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\77076\Desktop\APBD\tutorial 1\tutorial-1-syio27-1\crawler_solution\crawler\obj\Debug\net5.0\crawler.AssemblyInfoInputs.cache
+C:\Users\77076\Desktop\APBD\tutorial 1\tutorial-1-syio27-1\crawler_solution\crawler\obj\Debug\net5.0\crawler.AssemblyInfo.cs
+C:\Users\77076\Desktop\APBD\tutorial 1\tutorial-1-syio27-1\crawler_solution\crawler\obj\Debug\net5.0\crawler.csproj.CoreCompileInputs.cache
+C:\Users\77076\Desktop\APBD\tutorial 1\tutorial-1-syio27-1\crawler_solution\crawler\obj\Debug\net5.0\crawler.dll
+C:\Users\77076\Desktop\APBD\tutorial 1\tutorial-1-syio27-1\crawler_solution\crawler\obj\Debug\net5.0\ref\crawler.dll
+C:\Users\77076\Desktop\APBD\tutorial 1\tutorial-1-syio27-1\crawler_solution\crawler\obj\Debug\net5.0\crawler.pdb
+C:\Users\77076\Desktop\APBD\tutorial 1\tutorial-1-syio27-1\crawler_solution\crawler\obj\Debug\net5.0\crawler.genruntimeconfig.cache
