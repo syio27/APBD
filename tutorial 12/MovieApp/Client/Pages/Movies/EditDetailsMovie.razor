@@ -1,0 +1,26 @@
+﻿@page "/movies/edit/{MovieId:int}"
+@inject IMovieRepository movieRepository
+@inject NavigationManager navigationManager
+
+<h3>EditDetailsMovie</h3>
+
+@if (movie != null)
+{
+    <MovieForm Movie="movie" OnValidSubmit="Edit" />
+}
+
+@code {
+    [Parameter] public int MovieId { get; set; }
+    public Movie movie;
+
+    protected override async Task OnInitializedAsync()
+    {
+        movie = await movieRepository.GetMovie(MovieId);
+    }
+
+    private void Edit()
+    {
+        movieRepository.UpdateMovie(movie);
+        navigationManager.NavigateTo("movies");
+    }
+}

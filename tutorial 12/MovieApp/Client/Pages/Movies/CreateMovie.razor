@@ -1,0 +1,28 @@
+﻿@page "/movie/create"
+@inject IMovieRepository movieRepository
+@inject NavigationManager navigationManager
+
+<h2>Create New Movie</h2>
+
+<MovieForm Movie="movie" OnValidSubmit="Create" />
+
+@code {
+    private Movie movie = new Movie();
+
+    private async Task Create()
+    {
+        Console.WriteLine("Create method");
+        Console.WriteLine(movie.Id + "--" + movie.Title);
+
+        try
+        {
+            await movieRepository.CreateMovie(movie);
+            navigationManager.NavigateTo("movies");
+        }
+        catch (Exception ex)
+        {
+            // ...
+            Console.WriteLine(ex.Message);
+        }
+    }
+}

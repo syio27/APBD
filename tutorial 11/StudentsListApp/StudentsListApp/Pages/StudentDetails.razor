@@ -1,0 +1,61 @@
+﻿@page "/details/{FirstName}/{LastName}/{BirthDate}/{Studies}"
+
+@inject Microsoft.AspNetCore.Components.NavigationManager navigationManager
+
+<h1>Student details</h1>
+<hr />
+
+<div>
+
+</div>
+
+<div>
+    <dl class="row">
+        <dt class="col-sm-4">
+            First Name
+        </dt>
+        <dd class="col-sm-10">
+            @FirstName
+        </dd>
+        <dt class="col-sm-4">
+            Last Name
+        </dt>
+        <dd class="col-sm-10">
+            @LastName
+        </dd>
+        <dt class="col-sm-4">
+            Birthdate
+        </dt>
+        <dd class="col-sm-10">
+            @BirthDate
+        </dd>
+        <dt class="col-sm-4">
+            Studies
+        </dt>
+        <dd class="col-sm-10">
+            @Studies
+        </dd>
+    </dl>
+</div>
+
+<button @onclick="Return" class="btn btn-danger">Return</button>
+
+
+@code {
+    [Parameter]
+    public string FirstName { get; set; }
+
+    [Parameter]
+    public string LastName { get; set; }
+
+    [Parameter]
+    public string BirthDate { get; set; }
+
+    [Parameter]
+    public string Studies { get; set; }
+
+    void Return()
+    {
+        navigationManager.NavigateTo($"/students");
+    }
+}

@@ -1,0 +1,85 @@
+﻿@inject Microsoft.AspNetCore.Components.NavigationManager navigationManager
+
+@if (Students == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+
+
+<table class="table">
+        <thead>
+            <tr>
+                <th>Avatar</th>
+                <th @onclick="@(() => Sort("FirstName"))">
+                    First Name
+                </th>
+                <th @onclick="@(() => Sort("LastName"))">
+                    Last Name
+                </th>
+                <th @onclick="@(() => Sort("Birthdate"))">
+                    Birthdate
+                </th>
+                <th @onclick="@(() => Sort("Studies"))">
+                    Studies
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var student in Students)
+            {
+
+                <tr>
+                    <td><img src= "https://cdn0.iconfinder.com/data/icons/user-pictures/100/malecostume-512.png" alt="avatar" style="width: 60px;"></td>
+                    <td>@student.FirstName</td>
+                    <td>@student.LastName</td>
+                    <td>@student.BirthDate.ToString("MM.dd.yyyy")</td>
+                    <td>@student.Studies</td>
+                    <td>
+                        <button @onclick="() => Details(student)" class="btn btn-light">Details</button>
+                        <button @onclick="() => Delete(student.ID)" class="btn btn-light">Delete</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    [Parameter] public List<Student> Students { get; set; }
+
+    void Details(Student student)
+    {
+        navigationManager.NavigateTo($"/details/{student.FirstName}/{student.LastName}/{student.BirthDate}/{student.Studies}");
+    }
+
+    // TODO: js confirm
+    void Delete(int index)
+    {
+
+        var student = Students.Single(x => x.ID == index);
+        if (student != null)
+            Students.Remove(student);
+    }
+
+    void Sort(string column)
+    {
+        switch (column)
+        {
+            case "FirstName":
+                Students = Students.OrderBy(d => d.FirstName).ToList();
+                break;
+            case "LastName":
+                Students = Students.OrderBy(d => d.LastName).ToList();
+                break;
+            case "Birthdate":
+                Students = Students.OrderBy(d => d.BirthDate).ToList();
+                break;
+            case "Studies":
+                Students = Students.OrderBy(d => d.Studies).ToList();
+                break;
+        }
+    }
+}

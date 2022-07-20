@@ -1,0 +1,31 @@
+﻿@page "/movies"
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@attribute [Authorize]
+@inject HttpClient httpClient
+@inject IMovieRepository movieRepository
+
+<h3>Movies</h3>
+<div>
+    <h3>In theaters</h3>
+    <div class="form-group">
+        <a class="btn btn-light" href="movie/create">Add New Movie</a>
+    </div>
+    <MoviesList Movies="MoviesList" />
+</div>
+
+@code {
+
+    private List<Movie> MoviesList;
+    protected async override Task OnInitializedAsync()
+    {
+        try
+        {
+            MoviesList = await movieRepository.GetMovies();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("GET METHOD FAILED");
+        }
+    }
+}
